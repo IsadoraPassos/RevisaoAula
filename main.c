@@ -40,7 +40,71 @@ float divisao(){
     return resultado;
 }
 
-int main(){
+void pausar(){
+    int gambiarra;
+    printf("Digite qualquer numero para seguir: ");
+    scanf("%d", &gambiarra);
+}
 
+void menu(){
+    int escolha;
+    float resposta;
+
+    printf("Calculadora em c\n\n");
+
+    printf("Selecione a operacao: \n");
+    printf("1 - Soma\n");
+    printf("2- Subtracao\n");
+    printf("3 - Multiplicacao\n");
+    printf("4 - Divisao\n");
+    printf("5 - Sair\n");
+    printf("Escolha a operacao: ");
+    scanf("%d", &escolha);
+
+    switch(escolha){
+        case 1:
+            resposta = soma();
+            printf("\nResultado: %2f\n\n", resposta);
+            pausar();
+            system("clear");
+            menu();
+        break;
+        case 2:
+            resposta = subtracao();
+            printf("\nResultado: %2f\n\n", resposta);
+            pausar();
+            system("clear");
+            menu();
+        break;
+        case 3:
+            resposta = multiplicacao();
+            printf("\nResultado: %2f\n\n", resposta);
+            pausar();
+            system("clear");
+            menu();
+        break;
+        case 4:
+            resposta = divisao();
+            printf("\nResultado: %2f\n\n", resposta);
+            pausar();
+            system("clear");
+            menu();
+        break;
+        case 5:
+            system("exit");
+            printf("\nFinalizando");
+        break;
+
+        default:
+            printf("Resposta invalida\n");
+            getchar();
+            system("clear");
+            menu();
+            break;
+    }
+}
+
+int main(){
+    menu();
     return 0;
 }
