@@ -16,6 +16,14 @@ float soma(){
     return resultado;
 }
 
+float subtracao(){
+    float valor1, valor2, resultado;
+    valor1 = lerValor();
+    valor2 = lerValor();
+    resultado = valor1 - valor2;
+    return resultado;
+}
+
 int main(){
 
     return 0;
